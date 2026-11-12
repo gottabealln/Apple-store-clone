@@ -1,0 +1,441 @@
+/* =========================================
+   Hero Section
+   ========================================= */
+.hero-section {
+    padding: 100px 0 60px;
+}
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.hero-left {
+    flex: 1;
+}
+.hero-title {
+    font-size: 96px; 
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+    color: var(--text-primary);
+}
+.hero-right {
+    flex: 1;
+    text-align: right;
+    padding-top: 15px;
+}
+.hero-subtitle {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.125;
+    letter-spacing: .004em;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+.hero-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.hero-links a {
+    color: var(--accent-blue);
+    font-size: 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+}
+.hero-links a:hover {
+    text-decoration: underline;
+}
+.icon-external {
+    margin-top: 2px;
+}
+
+/* =========================================
+   Category Rail
+   ========================================= */
+.category-rail-section {
+    padding: 20px 0 80px;
+}
+.category-rail-wrapper {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding: 0 var(--side-padding);
+}
+.category-rail {
+    display: flex;
+    justify-content: center; /* Centers items */
+    gap: 45px; /* Increased gap */
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.category-rail::-webkit-scrollbar {
+    display: none; 
+}
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; 
+    min-width: 100px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+.category-item:hover {
+    transform: scale(1.03);
+    text-decoration: none;
+}
+.category-image-wrapper {
+    width: 100px; /* Increased size */
+    height: 100px; /* Increased size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.category-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.category-label {
+    font-size: 14px; /* Increased size */
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+/* =========================================
+   Carousel Section
+   ========================================= */
+.carousel-section {
+    padding: 40px 0;
+    overflow: hidden;
+}
+.section-title {
+    font-size: 28px;
+    line-height: 1.14;
+    font-weight: 600;
+    letter-spacing: .007em;
+    margin-bottom: 24px;
+}
+.section-title span {
+    color: var(--text-secondary);
+}
+.carousel-wrapper {
+    position: relative;
+}
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    /* Perfect alignment with the container above */
+    padding-left: max(var(--side-padding), calc((100vw - var(--max-width-content)) / 2 + var(--side-padding)));
+    padding-right: var(--side-padding);
+    scroll-padding-left: max(var(--side-padding), calc((100vw - var(--max-width-content)) / 2 + var(--side-padding)));
+}
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* =========================================
+   Card Base
+   ========================================= */
+.card {
+    flex: 0 0 calc(33.333% - 13.33px);
+    min-width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    /* Fixes the rendering line at the bottom of the cards */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.card:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Light Card */
+.card--light {
+    background-color: var(--bg-card-light);
+    color: var(--text-primary);
+}
+.card--light .card-eyebrow {
+    color: #bf4800;
+}
+.card--light .card-action .action-circle {
+    background-color: #e8e8ed;
+    color: #1d1d1f;
+}
+
+/* Dark Card */
+.card--dark {
+    background-color: var(--bg-card-dark);
+    color: var(--text-inverse);
+}
+.card--dark .card-eyebrow {
+    color: #f56300;
+}
+.card--dark .card-action .action-circle {
+    background-color: #333336;
+    color: #f5f5f7;
+}
+
+/* Base Content (Hero Cards) */
+.card-content {
+    padding: 30px 30px 0;
+    z-index: 2;
+}
+.card-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    display: block;
+    margin-bottom: 8px;
+}
+.card-title {
+    font-size: 28px;
+    line-height: 1.14;
+    font-weight: 600;
+    letter-spacing: .007em;
+    margin-bottom: 8px;
+}
+.card-subtitle {
+    font-size: 17px;
+    line-height: 1.23;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    margin-bottom: 12px;
+}
+.card-price {
+    font-size: 14px;
+    line-height: 1.28;
+    font-weight: 400;
+    letter-spacing: -.016em;
+}
+
+/* Base Image (Hero Cards) */
+.card-image {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 30px 20px; /* Added 20px bottom padding to give the image breathing room */
+    min-height: 0; /* CRITICAL: Forces the image container to respect the card boundaries */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 100%; /* Ensures the image never overflows the container */
+    object-fit: contain;
+    object-position: center bottom;
+    display: block;
+    vertical-align: bottom;
+}
+/* Action Button */
+.card-action {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+}
+.action-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+    transition: background-color 0.2s;
+}
+
+/* =========================================
+   Product Cards (Image Top, Text Bottom)
+   ========================================= */
+.card--product {
+    flex-direction: column-reverse; 
+}
+
+.card--product .card-content {
+    padding: 0 30px 60px;
+    flex-shrink: 0; /* Prevents text from being squished */
+}
+
+/* The Image Container */
+.card--product .card-image {
+    flex: 1; 
+    min-height: 0; /* CRITICAL: Forces flexbox to allow the image to shrink */
+    align-items: center;
+    padding: 40px 40px 20px; 
+}
+
+/* The Image Itself */
+.card--product .card-image img {
+    width: auto;   /* Overrides the base width: 100% */
+    height: auto;  /* Overrides the base height: 100% */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: scale(0.95); /* Adds a tiny bit of breathing room */
+}
+/* =========================================
+   Service Cards (Apple Store difference)
+   ========================================= */
+.text-gradient {
+    background: linear-gradient(90deg, #f06a6a, #f2b449, #7bb65e, #4eb5d1, #a262dd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+.card--service {
+    height: 280px !important; 
+    padding: 30px;
+    position: relative;
+}
+.card--service .card-content {
+    padding: 0 !important;
+    margin-top: 50px; 
+    z-index: 2;
+}
+.card--service .card-title {
+    font-size: 21px !important;
+    line-height: 1.19 !important;
+    font-weight: 600;
+    letter-spacing: .011em;
+    margin-bottom: 0 !important;
+}
+.card--service .card-title sup {
+    font-size: 0.6em;
+    vertical-align: super;
+}
+.card--service .card-image {
+    position: absolute !important;
+    top: 30px !important;
+    left: 30px !important;
+    width: 32px !important;
+    height: 32px !important;
+    flex-grow: 0 !important;
+    display: block !important;
+    padding: 0 !important;
+}
+.card--service .card-image .svg-wrapper,
+.card--service .card-image svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+.card--service .card-action {
+    bottom: 20px !important;
+    right: 20px !important;
+}
+
+/* =========================================
+   Carousel Navigation Arrows
+   ========================================= */
+.carousel-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0 var(--side-padding);
+}
+.carousel-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(210, 210, 215, 0.64);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+.carousel-btn:hover:not(:disabled) {
+    background-color: rgba(210, 210, 215, 0.9);
+}
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* =========================================
+   Quick Links
+   ========================================= */
+.quick-links-section {
+    padding: 60px 0;
+}
+.quick-links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.quick-link-pill {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--text-primary);
+    border-radius: 980px;
+    font-size: 14px;
+    color: var(--text-primary);
+    transition: background-color 0.2s;
+}
+.quick-link-pill:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+}
+
+/* =========================================
+   Footnotes
+   ========================================= */
+.footnotes-section {
+    padding: 20px 0 60px;
+}
+.footnotes-list {
+    font-size: 12px;
+    line-height: 1.33;
+    color: var(--text-secondary);
+}
+.footnotes-list p {
+    margin-bottom: 10px;
+}
+.footnotes-list a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+}
+
+/* =========================================
+   Help Section Cards (Bleed Images)
+   ========================================= */
+.card--help .card-image {
+    padding: 0; /* Remove padding so image touches edges */
+    overflow: hidden;
+}
+
+.card--help .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Forces the image to fill the box completely */
+    object-position: bottom center; /* Anchors image to the bottom */
+}
+
+/* The third card (Explore Apple Intelligence) needs to bleed to the right */
+.card--help:nth-child(3) .card-image img {
+    object-position: bottom right;
+}

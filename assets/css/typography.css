@@ -1,0 +1,66 @@
+/* SF Pro Text (Body) */
+@font-face {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/beex333/SFWeb@main/SFProText-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/beex333/SFWeb@main/SFProText-Semibold.woff2') format('woff2');
+}
+
+/* SF Pro Display (Headings) */
+@font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/beex333/SFWeb@main/SFProDisplay-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/beex333/SFWeb@main/SFProDisplay-Semibold.woff2') format('woff2');
+}
+
+/* =========================================
+   Base Typography
+   ========================================= */
+
+body {
+    font-family: var(--font-text);
+    color: var(--text-primary);
+    background-color: var(--bg-body);
+}
+
+h1, h2, h3, h4, h5, h6, 
+.hero-title, 
+.section-title,
+.card-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.015em; /* SF Pro Display requires tighter tracking */
+}
+
+.section-title {
+    font-size: 28px;
+    line-height: 1.14;
+    font-weight: 600;
+    letter-spacing: .007em;
+    margin-bottom: 20px;
+}
+
+.section-title span {
+    color: var(--text-secondary);
+}
+
+a:hover {
+    text-decoration: underline;
+}

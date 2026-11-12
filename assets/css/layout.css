@@ -1,0 +1,168 @@
+/* =========================================
+   Global Nav & Promo Bar
+   ========================================= */
+
+/* The Promo Bar (Below Nav) */
+.promo-bar {
+    background-color: #f5f5f7;
+    text-align: center;
+    padding: 14px 22px;
+    font-size: 14px;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+.promo-bar a {
+    color: var(--accent-blue);
+}
+
+/* The Global Navigation (Top) */
+.global-nav {
+    background-color: var(--bg-nav);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--nav-height);
+}
+
+.nav-wrapper {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    height: 100%;
+    display: flex; /* Forces elements into a row */
+    align-items: center; /* Vertically centers them */
+    justify-content: space-between; /* Pushes Logo left, Links center, Icons right */
+    padding: 0 var(--side-padding);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: var(--font-text);
+    font-size: 12px;
+    color: var(--text-primary);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-icon {
+    color: var(--text-primary);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon:hover {
+    opacity: 1;
+}
+
+.nav-hamburger {
+    display: none;
+}
+
+/* Replace the existing Footer section in layout.css with this: */
+
+/* Footer */
+.global-footer {
+    background-color: var(--bg-body);
+    padding: 40px var(--side-padding) 20px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+.footer-content {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+.footer-directory {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+}
+.footer-heading-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 0;
+    cursor: default; /* Desktop doesn't need cursor pointer */
+}
+.footer-heading {
+    font-size: 12px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.footer-chevron {
+    display: none; /* Hidden on desktop */
+}
+.footer-list {
+    display: block; /* Visible on desktop */
+}
+.footer-list li {
+    margin-bottom: 8px;
+}
+.footer-list a {
+    color: var(--text-secondary);
+}
+.footer-list a:hover {
+    text-decoration: underline;
+    color: var(--text-primary);
+}
+.footer-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer-mini a {
+    color: var(--accent-blue);
+}
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+.footer-legal ul {
+    display: flex;
+    gap: 10px;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    padding: 0 10px;
+}
+.footer-legal a {
+    color: var(--text-secondary);
+}
+.footer-locale {
+    margin-left: auto;
+}
+
+.container {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding: 0 var(--side-padding);
+}
